@@ -91,7 +91,7 @@ You can use the built-in response helper methods in your controllers for quick a
 ```php
 return $this->success(true, ['foo' => 'bar'], 'Operation successful');
 ```
-```
+```php
 return $this->error(false, [], 'Something went wrong', 500);
 ```
 
