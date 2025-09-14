@@ -1,0 +1,27 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# PHPStorm / VSCode / IDE files
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHPUnit cache & coverage
+.phpunit.cache/
+coverage/
+.clover
+.phpunit.result.cache
+
+# Node / frontend build artifacts (if ever added)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.*
