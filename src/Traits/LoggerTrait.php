@@ -46,8 +46,8 @@ trait LoggerTrait
      */
     private function formatMessage(string $message, int $trace): string
     {
-        $file = $this->getFile($trace);
-        $line = $this->getLine($trace);
+        $file = $this->getFileName($trace);
+        $line = $this->getLineNumber($trace);
 
         $appName = config('xetreon-jsonresponse.app_name', config('app.name', 'APP'));
         $code = $appName . '_COMMON';
@@ -71,7 +71,7 @@ trait LoggerTrait
     /**
      * Get file from debug_backtrace
      */
-    private function getFile(int $traceTrack = 1): string
+    private function getFileName(int $traceTrack = 1): string
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, $traceTrack + 1);
         $file = $trace[$traceTrack]['file'] ?? '';
@@ -81,7 +81,7 @@ trait LoggerTrait
     /**
      * Get line from debug_backtrace
      */
-    private function getLine(int $traceTrack = 1): int
+    private function getLineNumber(int $traceTrack = 1): int
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, $traceTrack + 1);
         return $trace[$traceTrack]['line'] ?? 0;
