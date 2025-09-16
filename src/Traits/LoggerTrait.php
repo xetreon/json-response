@@ -9,7 +9,7 @@ trait LoggerTrait
     /**
      * Log an info message
      */
-    public function createLog(string $message, array $data = [], int $trace = 1): string
+    public function createLog(string $message, array $data = [], int $trace = 1): void
     {
         $formatted = $this->formatMessage($message, $trace);
         Log::channel($this->getLogChannel())->info($formatted, $this->normalizeContext($data));
@@ -18,7 +18,7 @@ trait LoggerTrait
     /**
      * Log an error message
      */
-    public function createErrorLog(string $message, array $data = [], int $trace = 1): string
+    public function createErrorLog(string $message, array $data = [], int $trace = 1): void
     {
         $formatted = $this->formatMessage($message, $trace);
         Log::channel($this->getLogChannel())->error($formatted, $this->normalizeContext($data));
@@ -27,7 +27,7 @@ trait LoggerTrait
     /**
      * Log a warning message
      */
-    public function createWarningLog(string $message, array $data = [], int $trace = 1): string
+    public function createWarningLog(string $message, array $data = [], int $trace = 1): void
     {
         $formatted = $this->formatMessage($message, $trace);
         Log::channel($this->getLogChannel())->warning($formatted, $this->normalizeContext($data));
