@@ -3,7 +3,13 @@
 A lightweight Laravel package for **standardized JSON API responses**, validation, and error logging.  
 Perfect for building **clean, consistent REST APIs** without repeating boilerplate code.
 
----
+-------
+## ☕ Support Me
+
+If you find this package helpful, consider supporting my work:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%23FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/xetreon)
+-------
 
 ## 🚀 Features
 
