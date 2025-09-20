@@ -23,11 +23,14 @@ class JsonResponseServiceProvider extends ServiceProvider
             __DIR__ . '/Traits/ValidatorTrait.php' => app_path('Traits/ValidatorTrait.php'),
         ], 'traits');
 
-        // Optional: Publish Classes (for controller or exception boilerplate)
+        // Optional: Publish Controller
         $this->publishes([
-            __DIR__ . '/Controllers/BaseController.php' => app_path('Http/Controllers/BaseController.php'),
-            __DIR__ . '/Exceptions/BaseException.php'  => app_path('Exceptions/BaseException.php'),
-        ], 'classes');
+            __DIR__ . '/Controllers/Publish/BaseController.php' => app_path('Http/Controllers/BaseController.php')
+        ], 'controller');
+        // Optional: Publish Exception (for controller or exception boilerplate)
+        $this->publishes([
+            __DIR__ . '/Exceptions/Publish/BaseException.php'  => app_path('Exceptions/BaseException.php'),
+        ], 'exception');
     }
 
     /**
